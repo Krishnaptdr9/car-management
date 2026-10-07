@@ -7,6 +7,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CarRentol {
+	
     private List<Car> cars = new Array<>();
     private List<Customer> customers = new ArrayList<>();
     private List<Rental> rentals = new ArrayList<>();

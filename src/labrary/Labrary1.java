@@ -5,6 +5,7 @@ import java.io.Serializable;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
+
 class Book implements Serializable{
 	private static final long serialVersionUID = 1L;
 	
@@ -44,6 +45,7 @@ public class Labrary1 {
 	}
 	
 	public static void issueBook(int id ) throws Exception{
+		Book[] books;
 		for(Book b : books) {
 			if(b.id == id ) {
 				if(b.Issued)  throw new Exception ( "Book already siuued ! :");
@@ -52,11 +54,9 @@ public class Labrary1 {
 				savetoFile();
 				System.out.println("Book  isuued : " + b.Title);
 				return;
-				
 			}
 		}
 		throw new Exception ( "Book not Found please try again and Login  ! : ");
-		
 	}
 	
 	private static void savetoFile() {
